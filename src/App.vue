@@ -6,10 +6,8 @@
     <!-- key is hack to redraw component then locale changes -->
     <lu-bread-crumb :key="$i18n.locale"/>
 
-    <lu-main :leftmenu="menu" lastUpdated="2019-06-25" pageManagerMail="johan.dahl@lth.lu.se">
-        <!-- <transition name="fade"> -->
+    <lu-main :leftmenu="menu" lastUpdated="2019-06-25" pageManagerMail="john.doe@lth.lu.se">
           <router-view/>
-        <!-- </transition> -->
     </lu-main>
     <lu-footer
       :contact="{name: $t('lthFull'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se'}"
