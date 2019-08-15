@@ -12,6 +12,8 @@ import messages from './messages.js'
 const i18n = new VueI18n({
   locale: 'sv',
   fallbackLocale: 'sv',
+  // Don't warn if fallback is used
+  silentFallbackWarn: true,
   messages: messages
 })
 

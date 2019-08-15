@@ -1,7 +1,7 @@
 <template>
   <div>
     <lu-nav-mobile :menu="menu"/>
-    <lu-header :navbarmenu="menu" :topmenu="menu"/>
+    <lu-header :navbarmenu="menu" :topmenu="menu" has-listen/>
 
     <!-- key is hack to redraw component then locale changes -->
     <lu-bread-crumb :key="$i18n.locale"/>

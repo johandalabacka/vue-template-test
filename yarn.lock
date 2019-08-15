@@ -716,6 +716,15 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
+"@lu.se/vue-template@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@lu.se/vue-template/-/vue-template-1.0.2.tgz#6322f1725bfc2a7f668c54a3b0f8834604952cb5"
+  integrity sha512-fPorWYYk+EJZWBzHW9vpTV1ClOpvU8qwrjL/H8zGxlH+ABVgodgkzovHVmuceBI6ernmA5B0n00d5h0WiVQdKg==
+  dependencies:
+    vue "^2.6.10"
+    vue-i18n "^8.14.0"
+    vue-router "^3.1.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
