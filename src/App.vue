@@ -22,11 +22,7 @@
 </template>
 
 <script>
-import LuNavMobile from '@lu.se/vue-template/LuNavMobile'
-import LuHeader from '@lu.se/vue-template/LuHeader'
-import LuBreadCrumb from '@lu.se/vue-template/LuBreadCrumb'
-import LuMain from '@lu.se/vue-template/LuMain'
-import LuFooter from '@lu.se/vue-template/LuFooter'
+import {LuNavMobile, LuHeader, LuBreadCrumb, LuMain, LuFooter} from '@lu.se/vue-template'
 
 import menu from './menu.js'
 
