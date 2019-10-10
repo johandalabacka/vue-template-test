@@ -1,7 +1,6 @@
 <template>
   <div>
-    <lu-nav-mobile :menu="menu"/>
-    <lu-header :navbarmenu="menu" :topmenu="menu" has-listen/>
+    <lu-header :navbarmenu="menu" :topmenu="menu" :mobilemenu="menu" has-listen/>
 
     <!-- key is hack to redraw component then locale changes -->
     <lu-bread-crumb :key="$i18n.locale"/>
@@ -22,7 +21,7 @@
 </template>
 
 <script>
-import {LuNavMobile, LuHeader, LuBreadCrumb, LuMain, LuFooter} from '@lu.se/vue-template'
+import {LuHeader, LuBreadCrumb, LuMain, LuFooter} from '@lu.se/vue-template'
 
 import menu from './menu.js'
 
@@ -34,7 +33,6 @@ export default {
     }
   },
   components: {
-    LuNavMobile,
     LuHeader,
     LuBreadCrumb,
     LuMain,
