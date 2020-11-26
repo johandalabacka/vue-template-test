@@ -5,13 +5,14 @@ import VueI18n from 'vue-i18n'
 
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import messages from './messages.js'
+
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
 
 Vue.use(VueI18n)
-
-import messages from './messages.js'
 
 const i18n = new VueI18n({
   locale: 'sv',
@@ -23,8 +24,8 @@ const i18n = new VueI18n({
 
 /* eslint-disable no-new */
 new Vue({
+  components: { App },
   render: h => h(App),
   router,
-  i18n,
-  components: { App }
+  i18n
 }).$mount('#app')

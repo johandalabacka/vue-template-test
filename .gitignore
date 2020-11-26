@@ -22,3 +22,6 @@ yarn-error.log*
 
 # Ignore the LU template
 public/lumall
+
+# Ignore npmrc containing key
+.npmrc

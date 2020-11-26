@@ -9,10 +9,15 @@ export default [{
   url: 'http://www.lu.se'
 },
 {
-  id: 'page1',
-  label: 'Page1',
-  path: '/page1'
-  
+  id: 'admin',
+  label: 'admin',
+  children: [
+    {
+      id: 'page1',
+      label: 'Page1',
+      path: '/page1'
+    }
+  ]
 },
 {
   id: 'page2',

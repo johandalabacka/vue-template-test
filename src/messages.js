@@ -8,7 +8,6 @@ export default {
     Page3: 'Sidan 3',
     Page4: 'Sidan 4',
     Start: 'Start'
-    
   },
   en: {
     Google: 'Google',
