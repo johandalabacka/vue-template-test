@@ -1,11 +1,11 @@
 export default [{
   id: 'start',
-  label: 'Start',
+  label: 'start',
   path: '/'
 },
 {
   id: 'lu',
-  label: 'LU',
+  label: 'lu',
   url: 'http://www.lu.se'
 },
 {
@@ -21,7 +21,7 @@ export default [{
 },
 {
   id: 'page2',
-  label: 'Page2',
+  label: 'page2',
   path: '/page2',
   children: [{
     id: 'page3',
@@ -30,12 +30,12 @@ export default [{
   },
   {
     id: 'page4',
-    label: 'Page4',
+    label: 'page4',
     path: '/page2/page4'
   },
   {
     id: 'google',
-    label: 'Google',
+    label: 'google',
     url: 'https://www.google.com'
   }]
 }]
