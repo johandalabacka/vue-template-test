@@ -14,28 +14,43 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'home',
+      component: Home,
+      meta: {
+        title: 'home_title'
+      }
     },
     {
       path: '/page1',
-      name: 'Page1',
-      component: Page1
+      name: 'page1',
+      component: Page1,
+      meta: {
+        title: 'page1_title'
+      }
     },
     {
       path: '/page2',
       name: 'Page2',
-      component: Page2
+      component: Page2,
+      meta: {
+        title: 'page2_title'
+      }
     },
     {
       path: '/page2/page3',
-      name: 'Page3',
-      component: Page3
+      name: 'page3',
+      component: Page3,
+      meta: {
+        title: 'page3_title'
+      }
     },
     {
       path: '/page2/page4',
-      name: 'Page4',
-      component: Page4
+      name: 'page4',
+      component: Page4,
+      meta: {
+        title: 'page4_title'
+      }
     }
   ]
 })
