@@ -1,22 +1,34 @@
 export default {
   sv: {
-    Google: 'Google',
-    Home: 'Hem',
-    LU: 'LU',
-    Page1: 'Sidan 1',
-    Page2: 'Sidan 2',
-    Page3: 'Sidan 3',
-    Page4: 'Sidan 4',
-    Start: 'Start'
+    google: 'Google',
+    home: 'Hem',
+    home_title: 'Test | Hem',
+    lu: 'LU',
+    page1: 'Sidan 1',
+    page2: 'Sidan 2',
+    page3: 'Sidan 3',
+    page4: 'Sidan 4',
+    page1_title: 'Testa | Sidan 1',
+    page2_title: 'Testa | Sidan 2',
+    page3_title: 'Testa | Sidan 3',
+    page4_title: 'Testa | Sidan 4',
+    start: 'Start',
+    start_title: 'Testa | Start'
   },
   en: {
-    Google: 'Google',
-    Home: 'Home',
-    LU: 'LU',
-    Page1: 'Page 1',
-    Page2: 'Page 2',
-    Page3: 'Page 3',
-    Page4: 'Page 4',
-    Start: 'Start'
+    google: 'Google',
+    home: 'Home',
+    home_title: 'Testa | Home',
+    lu: 'LU',
+    page1: 'Page 1',
+    page2: 'Page 2',
+    page3: 'Page 3',
+    page4: 'Page 4',
+    page1_title: 'Test | Page 1',
+    page2_title: 'Test | Page 2',
+    page3_title: 'Test | Page 3',
+    page4_title: 'Test | Page 4',
+    start: 'Start',
+    start_title: 'Test | Start'
   }
 }
