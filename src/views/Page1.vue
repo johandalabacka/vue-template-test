@@ -10,7 +10,7 @@
       Which build tool to choose is largely dependent on your experience and needs. Webpack-based setup offers more powerful features such as code splitting, processing static assets as module dependencies and extracting component CSS into a separate file, but can be a bit more complex to configure. Browserify can be easier to setup in scenarios where you don’t need the advanced features that Webpack offers.
     </span>
 
-    <template v-slot:right-column>
+    <template #right-column>
       <lu-infobox title="Info">
         <p>Something important</p>
         <hr>

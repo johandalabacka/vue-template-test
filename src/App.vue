@@ -1,14 +1,17 @@
 <template>
   <div>
     <lu-header
-      :navbarmenu="menu"
+      :navbarmenu="null"
       :topmenu="menu"
       :mobilemenu="menu"
       has-login
+      has-search
+      empty-search
       :is-logged-in="isLoggedIn"
       logo-url="https://www.lth.se"
       :logo-src="`${baseUrl}lumall/images/logo/logo_lu_${$root.$i18n.locale}.svg`"
       :logo-title="$t('lthFull')"
+      compact
       @login="login"
       @logout="logout"
     />
@@ -20,16 +23,18 @@
     />
 
     <!-- key is hack to redraw component then locale changes -->
-    <lu-bread-crumb :key="$i18n.locale" />
+    <lu-bread-crumb v-if="false" :key="$i18n.locale" />
 
     <lu-main
-      :leftmenu="
-        menu"
-      last-updated="2019-06-25"
-      page-manager-mail="john.doe@lth.lu.se"
+      :leftmenu="menu"
+      compact
+      last-updated="2021-11-30"
+      page-manager-mail="john.doe1@lth.lu.se"
+      :page-manager-notice="$t('mail_only_for_support')"
     >
       <router-view />
     </lu-main>
+    <lu-to-top />
     <lu-footer
       :contact="{name: $t('lthFull'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se'}"
       :social-media="{
@@ -49,7 +54,7 @@
 <script>
 import '@lu.se/vue-template/icons'
 import '@lu.se/vue-template/iconsSocialMedia'
-import { LuHeader, LuBreadCrumb, LuMain, LuFooter, LuLogin } from '@lu.se/vue-template'
+import { LuHeader, LuBreadCrumb, LuMain, LuFooter, LuLogin, LuToTop } from '@lu.se/vue-template'
 
 import menu from './menu.js'
 
@@ -60,7 +65,8 @@ export default {
     LuBreadCrumb,
     LuMain,
     LuFooter,
-    LuLogin
+    LuLogin,
+    LuToTop
   },
   data () {
     return {
@@ -97,10 +103,12 @@ export default {
   i18n: {
     messages: {
       sv: {
-        lthFull: 'Lunds Tekniska Högskola, LTH'
+        lthFull: 'Lunds Tekniska Högskola, LTH',
+        test_page: 'Testsida'
       },
       en: {
-        lthFull: 'Faculty of engineering, LTH'
+        lthFull: 'Faculty of engineering, LTH',
+        test_page: 'Test page'
       }
     }
   }
