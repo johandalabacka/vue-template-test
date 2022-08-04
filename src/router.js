@@ -1,15 +1,13 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/views/Home'
-import Page1 from '@/views/Page1'
-import Page2 from '@/views/Page2'
-import Page3 from '@/views/Page3'
-import Page4 from '@/views/Page4'
+import { createRouter, createWebHistory } from 'vue-router'
 
-Vue.use(Router)
+import Home from '@/views/Home.vue'
+import Page1 from '@/views/Page1.vue'
+import Page2 from '@/views/Page2.vue'
+import Page3 from '@/views/Page3.vue'
+import Page4 from '@/views/Page4.vue'
 
-export default new Router({
-  // class used for active routes in LU template
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   linkExactActiveClass: 'active',
   routes: [
     {
@@ -54,3 +52,5 @@ export default new Router({
     }
   ]
 })
+
+export default router

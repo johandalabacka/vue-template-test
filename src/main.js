@@ -1,10 +1,8 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
-import VueI18n from 'vue-i18n'
-
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import router from './router.js'
+import { createI18n } from 'vue-i18n'
+import 'bootstrap'
 
 import '@lu.se/vue-template/icons'
 
@@ -43,26 +41,21 @@ library.add(
   faHourglass,
   faPencil,
   faPlus)
-Vue.component('FaIcon', FontAwesomeIcon)
 
-Vue.use(BootstrapVue)
-
-Vue.config.productionTip = false
-
-Vue.use(VueI18n)
-
-const i18n = new VueI18n({
+const i18n = createI18n({
   locale: 'sv',
   fallbackLocale: 'sv',
-  // Don't warn if fallback is used
+  // set fallback locale
+  messages, // set locale messages
+  // If you need to specify other options, you can set other options
+  // ...
   silentFallbackWarn: true,
-  messages: messages
+  // @todo just while developing
+  silentTranslationWarn: true // import.meta.env.MODE === 'production'
 })
 
-/* eslint-disable no-new */
-new Vue({
-  components: { App },
-  render: h => h(App),
-  router,
-  i18n
-}).$mount('#app')
+const app = createApp(App)
+app.component('FaIcon', FontAwesomeIcon)
+app.use(i18n)
+app.use(router)
+app.mount('#app')
