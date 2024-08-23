@@ -1,7 +1,7 @@
 <template>
   <lu-header
     :navbarmenu="menu" :topmenu="menu" :mobilemenu="menu" has-login has-search empty-search
-    :is-logged-in="isLoggedIn" logo-url="https://www.lth.se"
+    :is-logged-in="isLoggedIn" avatar="JD" logo-url="https://www.lth.se"
     :logo-src="`${baseUrl}lumall/images/logo/logo_lu_${$root.$i18n.locale}.svg`" :logo-title="$t('lthFull')" compact
     @login="login" @logout="logout"
   />
@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     login () {
-      this.isLoggedIn = 'Johan Dahl'
+      this.isLoggedIn = 'JD'
     },
     logout () {
       this.isLoggedIn = false
