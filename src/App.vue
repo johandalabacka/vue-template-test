@@ -1,5 +1,5 @@
 <template>
-  <lu-header
+  <LuHeader
     :navbarmenu="menu" :topmenu="menu" :mobilemenu="menu" has-login has-search empty-search
     :is-logged-in="isLoggedIn" avatar="JD" logo-url="https://www.lth.se"
     :logo-src="`${baseUrl}lumall/images/logo/logo_lu_${$root.$i18n.locale}.svg`" :logo-title="$t('lthFull')" compact
@@ -7,16 +7,16 @@
   />
 
   <!-- key is hack to redraw component then locale changes -->
-  <lu-bread-crumb v-if="false" :key="$i18n.locale" />
+  <LuBreadCrumb v-if="false" :key="$i18n.locale" />
 
-  <lu-main
+  <LuMain
     :leftmenu="menu" compact last-updated="2021-11-30" page-manager-mail="john.doe1@lth.lu.se"
     :page-manager-notice="$t('mail_only_for_support')"
   >
     <router-view />
-  </lu-main>
-  <lu-to-top />
-  <lu-footer
+  </LuMain>
+  <LuToTop />
+  <LuFooter
     :contact="{ name: $t('lthFull'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se' }"
     :social-media="{
       facebook: 'https://www.facebook.com/lundstekniskahogskola',

@@ -1,5 +1,5 @@
 <template>
-  <lu-row>
+  <LuRow>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -80,14 +80,14 @@
         </a>
       </li>
     </ul>
-  </lu-row>
+  </LuRow>
 </template>
 
 <script>
 import { LuRow } from '@lu.se/vue-template'
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
     LuRow
   },

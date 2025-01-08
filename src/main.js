@@ -24,7 +24,6 @@ import messages from './messages.js'
 /**
  *  vee-validate provides validation on forms
  */
-// eslint-disable-next-line camelcase
 
 library.add(
   faArrowLeft, faArrowRight, faArrowUp,

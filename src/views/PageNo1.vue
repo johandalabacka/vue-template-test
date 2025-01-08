@@ -1,8 +1,8 @@
 <template>
-  <lu-row>
+  <LuRow>
     <h1>Sidan 1</h1>
     <h2>Test av Vue och lu-mall</h2>
-    <lu-spinner
+    <LuSpinner
       v-show="true"
       text="Loading"
     />
@@ -11,23 +11,23 @@
     </span>
 
     <template #right-column>
-      <lu-infobox title="Info">
+      <LuInfobox title="Info">
         <p>Something important</p>
         <hr>
         <p>
           And a little more text. Just for filling the box
           so it looks slightly nicer.
         </p>
-      </lu-infobox>
+      </LuInfobox>
     </template>
-  </lu-row>
+  </LuRow>
 </template>
 
 <script>
 import { LuRow, LuInfobox, LuSpinner } from '@lu.se/vue-template'
 
 export default {
-  name: 'Page1',
+  name: 'PageNo1',
   components: {
     LuRow,
     LuInfobox,
