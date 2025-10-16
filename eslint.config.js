@@ -3,41 +3,40 @@ import pluginVue from 'eslint-plugin-vue'
 import pluginNoAutofix from 'eslint-plugin-no-autofix'
 import pluginPromise from 'eslint-plugin-promise'
 import * as cssPlugin from 'eslint-plugin-css'
+// If files or folders need to be ignored
+// import { globalIgnores } from 'eslint/config'
 
 export default [
   ...neostandard(),
-  // vue 2 use flat/vue2-recommended
   ...pluginVue.configs['flat/recommended'],
   pluginPromise.configs['flat/recommended'],
   cssPlugin.configs['flat/standard'],
   {
     plugins: { 'no-autofix': pluginNoAutofix },
-    rules: { 'prefer-const': 'off', 'no-autofix/prefer-const': 'error' }
+    rules: { 'prefer-const': 'off', 'no-autofix/prefer-const': 'error' },
   },
   {
     rules: {
       // neostandard rule overrides
-      'comma-dangle': ['error', 'never'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
 
       // vue rule overrides
-      'vue/max-attributes-per-line': 'off',
+      'vue/comma-dangle': ['error', 'always-multiline'],
       // Component name must match name of file
       'vue/match-component-file-name': [
         'error',
         {
           extensions: ['vue'],
-          shouldMatchCase: true
-        }
+          shouldMatchCase: true,
+        },
       ],
-
       // Use PascalCase in templates
       'vue/component-name-in-template-casing': 'error',
-
       // Possible useful exceptions
       // Turn off error on mutating objects sent in as props
-      'vue/no-mutating-props': 'off',
+      // 'vue/no-mutating-props': 'off',
       // Turn off error for using v-html tag
-      'vue/no-v-html': 'off',
-    }
+      // 'vue/no-v-html': 'off',
+    },
   },
 ]
