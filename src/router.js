@@ -15,42 +15,42 @@ const router = createRouter({
       name: 'home',
       component: HomePage,
       meta: {
-        title: 'home_title'
-      }
+        title: 'home_title',
+      },
     },
     {
       path: '/page1',
       name: 'page1',
       component: PageNo1,
       meta: {
-        title: 'page1_title'
-      }
+        title: 'page1_title',
+      },
     },
     {
       path: '/page2',
-      name: 'Page2',
+      name: 'page2',
       component: PageNo2,
       meta: {
-        title: 'page2_title'
-      }
+        title: 'page2_title',
+      },
     },
     {
       path: '/page2/page3',
       name: 'page3',
       component: PageNo3,
       meta: {
-        title: 'page3_title'
-      }
+        title: 'page3_title',
+      },
     },
     {
       path: '/page2/page4',
       name: 'page4',
       component: PageNo4,
       meta: {
-        title: 'page4_title'
-      }
-    }
-  ]
+        title: 'page4_title',
+      },
+    },
+  ],
 })
 
 export default router

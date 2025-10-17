@@ -14,7 +14,7 @@ export default [{
   children: [
     {
       id: 'page1',
-      label: 'Page1',
+      label: 'page1',
       path: '/page1',
     },
   ],

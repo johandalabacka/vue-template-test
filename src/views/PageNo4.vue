@@ -1,24 +1,16 @@
 <template>
   <LuRow>
-    <h1>Sidan 4</h1>
-    <h2>Ännu en fantastisk underrubrik</h2>
-    <span>
-      Det är ett välkänt faktum att läsare distraheras av läsbar text på en sida när man skall studera layouten. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde, till skillnad från "Text här, Text här", och ger intryck av att vara läsbar text. Många publiseringprogram och webbutvecklare använder Lorem Ipsum som test-text, och en sökning efter "Lorem Ipsum" avslöjar många webbsidor under uteckling. Olika versioner har dykt upp under åren, ibland av olyckshändelse, ibland med flit (mer eller mindre humoristiska).
+    <h1>{{ t('page4_title') }}</h1>
+    <h2>{{ t('page4_subheader') }}</h2>
+    <span>{{ t('page4_content') }}
     </span>
   </LuRow>
 </template>
 
-<script>
+<script setup>
 import { LuRow } from '@lu.se/vue-template'
+import { useI18n } from 'vue-i18n'
 
-export default {
-  name: 'PageNo4',
-  components: {
-    LuRow
-  },
-  data () {
-    return {
-    }
-  }
-}
+const { t } = useI18n()
+
 </script>

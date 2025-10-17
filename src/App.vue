@@ -10,7 +10,7 @@
     avatar="JD"
     logo-url="https://www.lth.se"
     :logo-src="`${baseUrl}lumall/images/logo/lth_logo_${locale}.svg`"
-    :logo-title="t('lthFull')"
+    :logo-title="t('lth_full')"
     compact
     @login="login"
     @logout="logout"
@@ -18,7 +18,7 @@
 
   <!-- key is hack to redraw component then locale changes -->
   <LuBreadCrumb
-    v-if="false"
+    v-if="true"
     :key="locale"
   />
 
@@ -33,7 +33,7 @@
   </LuMain>
   <LuToTop />
   <LuFooter
-    :contact="{ name: t('lthFull'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se' }"
+    :contact="{ name: t('lth_full'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se' }"
     :social-media="{
       facebook: 'https://www.facebook.com/lundstekniskahogskola',
       linkedin: 'https://www.linkedin.com/school/lunds-tekniska-högskola',
@@ -41,8 +41,8 @@
       twitter: 'https://twitter.com/lthinfo',
       youtube: 'https://www.youtube.com/user/LunduniversityLTH/featured',
     }"
-    :logo-src="`${baseUrl}lumall/images/logo/logo_lth_footer_${locale}@1x.png`"
-    :logo-title="t('lthFull')"
+    :logo-src="`${baseUrl}lumall/images/logo/footer-logo-lth-sv-responsive.png`"
+    :logo-title="t('lth_full')"
     :short-cuts="menu"
   />
 </template>
@@ -60,7 +60,7 @@ const baseUrl = import.meta.env.BASE_URL
 const isLoggedIn = ref(false)
 
 const login = () => {
-  isLoggedIn.value = 'JD'
+  isLoggedIn.value = true
 }
 
 const logout = () => {
@@ -69,27 +69,6 @@ const logout = () => {
 
 const menu = computed(() => menuData)
 
-// const localMessages = {
-//   sv: {
-//     lthFull: 'Lunds Tekniska Högskola, LTH',
-//     test_page: 'Testsida',
-//   },
-//   en: {
-//     lthFull: 'Faculty of engineering, LTH',
-//     test_page: 'Test page',
-//   },
-// }
-
 const { t, locale } = useI18n()
 
-// const browserLocale = navigator.language.split('-')[0] // e.g. 'sv' from 'sv-SE'
-// const supportedLocales = ['en', 'sv']
-// const newLocale = supportedLocales.includes(browserLocale) ? browserLocale : 'en'
-
-// console.log('navigator.language: ', navigator.language)
-// console.log('i18n.locale: ', locale.value)
-// console.log('new_locale: ', newLocale)
-// console.log(getLocaleMessage(locale.value))
-// console.log(globalI18n.getLocaleMessage(locale.value))
-// console.log('i18n: ', typeof i18n['global'])
 </script>

@@ -22,7 +22,8 @@ import {
 } from '@fortawesome/pro-light-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import demoMessages from './messages.js'
+import localeEn from './locales/en.json'
+import localeSv from './locales/sv.json'
 
 library.add(
   faArrowLeft, faArrowRight, faArrowUp,
@@ -43,11 +44,11 @@ library.add(
 const messages = {
   sv: {
     ...lumallMessages.sv,
-    ...demoMessages.sv,
+    ...localeSv,
   },
   en: {
     ...lumallMessages.en,
-    ...demoMessages.en,
+    ...localeEn,
   },
 }
 
@@ -70,8 +71,6 @@ const i18n = createI18n({
   // Remove warning on html in translation
   warnHtmlMessage: false,
 })
-i18n.global.mergeLocaleMessage('sv', { lumall: lumallMessages.sv })
-// import.meta.env.MODE === 'production'
 
 const app = createApp(App)
 app.component('FaIcon', FontAwesomeIcon)
@@ -81,6 +80,3 @@ app.mount('#app')
 
 console.log('Running in mode: ', import.meta.env.MODE)
 console.log('messages: ', messages)
-// console.log('i18n: ', Object.keys(i18n))
-// console.log('i18n: ', typeof i18n['global'])
-// console.log('i18n: ', Object.keys(i18n['__instances']))
