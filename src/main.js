@@ -6,7 +6,8 @@ import 'bootstrap'
 import { useLocalStorage } from '@vueuse/core'
 
 import '@lu.se/vue-template/icons'
-import { messages as lumallMessages } from '@lu.se/vue-template'
+import LuTemplate from '@lu.se/vue-template'
+// import { messages as lumallMessages } from '@lu.se/vue-template'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -22,8 +23,13 @@ import {
 } from '@fortawesome/pro-light-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import localeEn from './locales/en.json'
-import localeSv from './locales/sv.json'
+import en from './locales/en.json'
+import sv from './locales/sv.json'
+
+const messages = {
+  sv,
+  en,
+}
 
 library.add(
   faArrowLeft, faArrowRight, faArrowUp,
@@ -41,16 +47,22 @@ library.add(
   faPencil,
   faPlus)
 
-const messages = {
-  sv: {
-    ...lumallMessages.sv,
-    ...localeSv,
-  },
-  en: {
-    ...lumallMessages.en,
-    ...localeEn,
-  },
-}
+// const messages = {
+//   sv: {
+//     ...lumallMessages.sv,
+//     ...sv,
+//   },
+//   en: {
+//     ...lumallMessages.en,
+//     ...en,
+//   },
+//   // fr: {
+//   //   ...lumallMessages.en,
+//   // },
+//   // su: {
+//   //   ...lumallMessages.en,
+//   // },
+// }
 
 const i18n = createI18n({
   locale: useLocalStorage('language', 'sv').value,
@@ -59,24 +71,26 @@ const i18n = createI18n({
   allowComposition: true,
   // globalInjection: true,
   mode: 'composition',
-  messages, // set locale messages
-  // If you need to specify other options, you can set other options
-  // ...
+  messages,
   warnFallback: false,
-  warnHtmlInMessage: 'off',
   silentFallbackWarn: true,
   // @todo just while developing
   silentTranslationWarn: true, // import.meta.env.MODE === 'production'
-
   // Remove warning on html in translation
   warnHtmlMessage: false,
 })
 
+// console.log({ i18n })
+
 const app = createApp(App)
 app.component('FaIcon', FontAwesomeIcon)
 app.use(i18n)
+app.use(LuTemplate, i18n)
 app.use(router)
 app.mount('#app')
 
+console.log('i18n.global:', i18n.global)
+console.log('i18n.global.messages.value:', i18n.global.messages.value)
+// console.log('i18n.global.availableLocales:', i18n.global.availableLocales)
 console.log('Running in mode: ', import.meta.env.MODE)
-console.log('messages: ', messages)
+// console.log('messages: ', messages)

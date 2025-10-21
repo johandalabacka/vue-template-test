@@ -26,7 +26,7 @@
     :leftmenu="menu"
     compact
     last-updated="2021-11-30"
-    page-manager-mail="john.doe1@lth.lu.se"
+    :page-manager-mail="t('page_manager')"
     :page-manager-notice="t('mail_only_for_support')"
   >
     <router-view />
@@ -70,5 +70,4 @@ const logout = () => {
 const menu = computed(() => menuData)
 
 const { t, locale } = useI18n()
-
 </script>
