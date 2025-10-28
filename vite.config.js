@@ -14,8 +14,9 @@ export default defineConfig({
     VueI18nPlugin({
       /* options */
       // locale messages resource pre-compile option
-      include: path.resolve(__dirname, './src/messages.js'),
+      include: path.resolve(__dirname, './src/locales/*'),
       // include: resolve(dirname(fileURLToPath(import.meta.url)), './src/messages.js'),
+      strictMessage: false,
     }),
     Components({ /* options */ }),
   ],

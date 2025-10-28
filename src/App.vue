@@ -34,14 +34,7 @@
   <LuToTop />
   <LuFooter
     :contact="{ name: t('lth_full'), box: '118', zip: '221 00', phone: '046-222 72 00', mail: 'info@lth.se' }"
-    :social-media="{
-      facebook: 'https://www.facebook.com/lundstekniskahogskola',
-      linkedin: 'https://www.linkedin.com/school/lunds-tekniska-högskola',
-      instagram: 'https://www.instagram.com/lth_lunduniversity',
-      twitter: 'https://twitter.com/lthinfo',
-      youtube: 'https://www.youtube.com/user/LunduniversityLTH/featured',
-    }"
-    :logo-src="`${baseUrl}lumall/images/logo/footer-logo-lth-sv-responsive.png`"
+    :logo-src="`${baseUrl}lumall/images/logo/lth_logo_footer_${locale}.svg`"
     :logo-title="t('lth_full')"
     :short-cuts="menu"
   />
@@ -51,7 +44,6 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import '@lu.se/vue-template/icons'
-import '@lu.se/vue-template/iconsSocialMedia'
 import { LuHeader, LuBreadCrumb, LuMain, LuFooter, LuToTop } from '@lu.se/vue-template/index.js'
 
 import menuData from './menu.js'

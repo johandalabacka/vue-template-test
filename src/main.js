@@ -6,7 +6,7 @@ import 'bootstrap'
 import { useLocalStorage } from '@vueuse/core'
 
 import '@lu.se/vue-template/icons'
-import LuTemplate from '@lu.se/vue-template'
+import luTemplate from '@lu.se/vue-template'
 // import { messages as lumallMessages } from '@lu.se/vue-template'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -85,12 +85,12 @@ const i18n = createI18n({
 const app = createApp(App)
 app.component('FaIcon', FontAwesomeIcon)
 app.use(i18n)
-app.use(LuTemplate, i18n)
+app.use(luTemplate, i18n)
 app.use(router)
 app.mount('#app')
 
-console.log('i18n.global:', i18n.global)
-console.log('i18n.global.messages.value:', i18n.global.messages.value)
+// console.log('i18n.global:', i18n.global)
+// console.log('i18n.global.messages.value:', i18n.global.messages.value)
 // console.log('i18n.global.availableLocales:', i18n.global.availableLocales)
 console.log('Running in mode: ', import.meta.env.MODE)
 // console.log('messages: ', messages)
