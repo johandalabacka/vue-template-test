@@ -21,6 +21,8 @@
   "page2_title": "Test - Page 2",
   "page3": "Page 3",
   "page3_content": "Lorem Ipsum is a filler text from the printing and publishing industry. \nLorem ipsum has been standard since the 16th century, when an unknown typewriter took that number of letters and mixed them up to make a proof copy of a book. \nLorem ipsum has not only survived five centuries, but also the transition to electronic typography without major changes. \nIt became widely known in the 1960s with the release of Letraset sheets with passages of Lorem Ipsum, and later with software such as Aldus PageMaker.",
+  "page3_icon_app": "This icon is imported in this app: ",
+  "page3_icon_luvt": "This icon is imported in the package ({'@'}lu.se/vue-template): ",
   "page3_subheader": "Long content (test the LuToTop component)",
   "page3_title": "Test - Page 3",
   "page4": "Page 4",

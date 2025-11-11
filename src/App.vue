@@ -43,7 +43,6 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import '@lu.se/vue-template/icons'
 import { LuHeader, LuBreadCrumb, LuMain, LuFooter, LuToTop } from '@lu.se/vue-template/index.js'
 
 import menuData from './menu.js'

@@ -5,48 +5,30 @@ import { createI18n } from 'vue-i18n'
 import 'bootstrap'
 import { useLocalStorage } from '@vueuse/core'
 
-import '@lu.se/vue-template/icons'
+// Import the self-installing plugin from the LU Vue Template package:
 import luTemplate from '@lu.se/vue-template'
-// import { messages as lumallMessages } from '@lu.se/vue-template'
 
+// The following is only to show that you can specify your own icons
+// the same way as you would before, but now only the one that are
+// specific to your app.
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-  faArrowLeft, faArrowRight, faArrowUp,
-  faCaretCircleDown, faCaretCircleUp,
-  faCheck, faCheckSquare, faChevronDoubleDown, faChevronDoubleUp,
-  faCopy,
-  faEdit, faEnvelope,
-  faExternalLink, faHandshake,
-  faHome,
-  faHourglass,
-  faPencil, faPlus,
+  faJackOLantern,
 } from '@fortawesome/pro-light-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+// Import your locale files (or define the messages here):
 import en from './locales/en.json'
 import sv from './locales/sv.json'
 
+// You can either just define your own messages..:
 const messages = {
   sv,
   en,
 }
 
-library.add(
-  faArrowLeft, faArrowRight, faArrowUp,
-  faCaretCircleDown, faCaretCircleUp,
-  faCheck,
-  faCheckSquare,
-  faChevronDoubleDown, faChevronDoubleUp,
-  faCopy,
-  faEdit,
-  faEnvelope,
-  faExternalLink,
-  faHandshake,
-  faHome,
-  faHourglass,
-  faPencil,
-  faPlus)
-
+// // ..Or you can manually merge your messages with the messages
+// // from the LU Vue Template package:
+// import { messages as lumallMessages } from '@lu.se/vue-template'
 // const messages = {
 //   sv: {
 //     ...lumallMessages.sv,
@@ -80,17 +62,16 @@ const i18n = createI18n({
   warnHtmlMessage: false,
 })
 
-// console.log({ i18n })
+library.add(
+  faJackOLantern,
+)
 
 const app = createApp(App)
-app.component('FaIcon', FontAwesomeIcon)
 app.use(i18n)
+// This Vue plugin self-installs all i18n messages and icons
+// the package needs:
 app.use(luTemplate, i18n)
 app.use(router)
 app.mount('#app')
 
-// console.log('i18n.global:', i18n.global)
-// console.log('i18n.global.messages.value:', i18n.global.messages.value)
-// console.log('i18n.global.availableLocales:', i18n.global.availableLocales)
 console.log('Running in mode: ', import.meta.env.MODE)
-// console.log('messages: ', messages)
