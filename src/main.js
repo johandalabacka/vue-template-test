@@ -14,6 +14,7 @@ import luTemplate from '@lu.se/vue-template'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faJackOLantern,
+  faBars,
 } from '@fortawesome/pro-light-svg-icons'
 
 // Import your locale files (or define the messages here):
@@ -64,6 +65,7 @@ const i18n = createI18n({
 
 library.add(
   faJackOLantern,
+  faBars,
 )
 
 const app = createApp(App)

@@ -25,6 +25,7 @@
   "page3_title": "Testa - Sidan 3",
   "page3_icon_luvt": "Den här ikonen är importerad i paketet ({'@'}lu.se/vue-template): ",
   "page3_icon_app": "Den här ikonen är importerad i den här appen: ",
+  "page3_icon_both": "Den här ikonen är importerad både i paketet ({'@'}lu.se/vue-template) och i den här appen: ",
   "page4": "Sidan 4",
   "page4_content": "Det är ett välkänt faktum att läsare distraheras av läsbar text på en sida när man skall studera layouten. Poängen med Lorem Ipsum är att det ger ett normalt ordflöde, till skillnad från \"Text här, Text här\", och ger intryck av att vara läsbar text. Många publiseringprogram och webbutvecklare använder Lorem Ipsum som test-text, och en sökning efter \"Lorem Ipsum\" avslöjar många webbsidor under utveckling. Olika versioner har dykt upp under åren, ibland av olyckshändelse, ibland med flit (mer eller mindre humoristiska).",
   "page4_subheader": "Ännu en fantastisk underrubrik",

@@ -9,6 +9,9 @@
       <li>
         {{ t('page3_icon_app') }}<fa-icon :icon="['fal', 'jack-o-lantern']" />
       </li>
+      <li>
+        {{ t('page3_icon_both') }}<fa-icon :icon="['fal', 'bars']" />
+      </li>
     </ul>
     <p
       v-for="i in 10"
