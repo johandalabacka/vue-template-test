@@ -29,7 +29,14 @@
     :page-manager-mail="t('page_manager')"
     :page-manager-notice="t('mail_only_for_support')"
   >
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <transition
+        name="fade"
+        mode="out-in"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </LuMain>
   <LuToTop />
   <LuFooter
@@ -42,7 +49,7 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { t, locale } from '@/i18n.js'
 import { LuHeader, LuBreadCrumb, LuMain, LuFooter, LuToTop } from '@lu.se/vue-template/index.js'
 
 import menuData from './menu.js'
@@ -60,5 +67,18 @@ const logout = () => {
 
 const menu = computed(() => menuData)
 
-const { t, locale } = useI18n()
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+</style>

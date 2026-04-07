@@ -25,3 +25,4 @@ public/lumall
 
 # Ignore npmrc containing key
 .npmrc
+components.d.ts

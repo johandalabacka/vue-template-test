@@ -4,26 +4,19 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 // import { resolve, dirname } from 'node:path'
 // import { fileURLToPath } from 'node:url'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import Components from 'unplugin-vue-components/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    VueI18nPlugin({
-      /* options */
-      // locale messages resource pre-compile option
-      include: path.resolve(__dirname, './src/locales/*'),
-      // include: resolve(dirname(fileURLToPath(import.meta.url)), './src/messages.js'),
-      strictMessage: false,
-    }),
     Components({ /* options */ }),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    preserveSymlinks: true,
   },
   build: {
     target: 'es2022',
